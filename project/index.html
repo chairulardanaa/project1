@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+<style>
+    body{
+        font-family: 'poppins',sans-serif;
+    }
+
+    #btn-alert {
+      border: none;
+      border-radius: 5px;
+      padding: 7px 10px;
+      background-color: rgb(14, 112, 224);
+      font-size: 1.3em;
+      color: #fff;
+      transition: 0,2s;
+      position: fixed;
+      left: 45%;
+      top: 45%;
+     }
+
+
+     #btn-alert:hover{
+      opacity: 0,8;
+     }
+     
+     #btn-alert focus{
+      outline: rgb(48, 114, 190) solid 3px;
+      outline-offset: 3px;
+     }
+
+         @media (max-width: 576px) {
+           #btn-alert{
+            left: 38%;
+          }
+           }
+         
+</style>
+
+
+<title>Happy birthday Nidya</title>
+</head>
+<body>
+    
+    <button id="btn-alert"onclick="munculinAlert()">klik Aku!</button>
+
+<script>
+  async function munculinAlert() {
+       await swal.fire('Hai kok dibuka si?')
+       await swal.fire('gausa dibuka njing')
+       await swal.fire({
+             title: 'halo perkenal kan nama saya...',
+             text:'Semoga cepat panjang rambut dan sehat selalu',
+             imageUrl: 'assets/botak.png',
+             imageWidth: 400,   
+             imageHeight: 300,
+        });
+         await Swal.fire({
+              title: 'jangan dibuka',
+              text: "yang ini juga jangan",
+              icon: 'question',
+              showDenyButton: true,
+              confirmButtonColor: "#3085d6",
+              confirmButtonText: 'jangan dibuka',
+              denyButtonText: 'yang ini juga jangan',
+     }).then((result) => {
+       if (result.isConfirmed) {
+         swal.fire({
+             title:'udah dibilang jangan dibuka',
+             text:'semoga panjang rambut sehat selalu yak',
+             imageUrl: 'assets/botak.png',
+             imageWidth: 400,   
+             imageHeight: 300,
+        })
+       } else{
+        swal.fire({
+             title:'udah dibilang jangan dibuka',
+             text:'ngeyel banget anj,ga panjang ntar rambutnya',
+             imageUrl: 'assets/botak.png',
+             imageWidth: 400,   
+             imageHeight: 300,
+        })
+       }
+    })
+  }
+
+    </script>
